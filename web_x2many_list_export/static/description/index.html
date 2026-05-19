@@ -1,92 +1,96 @@
-<div>
-<div align="center">
-    <h1>X2Many Excel Export for Odoo 19</h1>
-    <h3>Export one2many and many2many embedded list fields to Excel XLSX</h3>
-    <p>
-        X2Many Excel Export lets developers enable Excel export directly inside
-        embedded list views on Odoo forms. Add <strong>export_xlsx="1"</strong>
-        to the nested <strong>&lt;list&gt;</strong> tag and users can download the
-        list records as an XLSX file.
-    </p>
-    <p>
-        Perfect for order lines, invoice lines, grant batches, employee lines,
-        product variants, project lines, and any relational one2many or many2many
-        list shown inside a form view.
-    </p>
-</div>
+<div style="max-width: 1120px; margin: 0 auto; font-family: Arial, Helvetica, sans-serif; color: #1f2937; line-height: 1.55;">
+    <div style="text-align: center; padding: 44px 24px 30px;">
+        <div style="display: inline-block; padding: 6px 12px; border-radius: 999px; background: #ede9f6; color: #6f5a99; font-size: 13px; font-weight: 700; margin-bottom: 14px;">
+            Odoo 19 - One2many &amp; Many2many XLSX Export
+        </div>
+        <h1 style="font-size: 42px; line-height: 1.15; margin: 0 0 14px; color: #111827; font-weight: 800;">
+            X2Many Excel Export
+        </h1>
+        <p style="max-width: 820px; margin: 0 auto; color: #4b5563; font-size: 18px;">
+            Add an <strong>Export Excel</strong> button to embedded one2many and many2many list fields.
+            Enable it per list with <strong>export_xlsx="1"</strong> and let users download the lines as XLSX.
+        </p>
+    </div>
 
-<p align="center">
-    <img src="main_screenshot.png" width="100%" alt="Export Excel button on an Odoo x2many list field" />
-</p>
+    <div style="border: 1px solid #e5e7eb; border-radius: 10px; overflow: hidden; background: #ffffff; box-shadow: 0 12px 28px rgba(17, 24, 39, 0.08); margin: 0 16px 34px;">
+        <div style="height: 56px; background: #715b9b; display: flex; align-items: center; padding: 0 18px;">
+            <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #ffffff; opacity: .9; margin-right: 8px;"></span>
+            <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #ffffff; opacity: .65; margin-right: 8px;"></span>
+            <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #ffffff; opacity: .45;"></span>
+        </div>
+        <div style="padding: 26px; background: #f9fafb;">
+            <img src="main_screenshot.png" width="100%" alt="Export Excel button on an Odoo x2many list field" style="display: block; border-radius: 8px; border: 1px solid #e5e7eb; background: #ffffff;" />
+        </div>
+    </div>
 
-<table width="100%" cellpadding="12" cellspacing="0" border="0">
-    <tr>
-        <td width="33%" valign="top" bgcolor="#F7F7F9">
-            <h3>Simple XML Switch</h3>
-            <p>
-                Enable export per list with <strong>export_xlsx="1"</strong>.
-                No Python code is needed in your business module.
+    <div style="display: table; width: 100%; border-spacing: 16px; margin-bottom: 22px;">
+        <div style="display: table-cell; width: 33.33%; vertical-align: top; background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px;">
+            <h3 style="margin: 0 0 8px; font-size: 20px; color: #111827;">Simple XML Switch</h3>
+            <p style="margin: 0; color: #4b5563;">
+                Add <strong>export_xlsx="1"</strong> to the nested list view. No Python code is required in your business module.
             </p>
-        </td>
-        <td width="33%" valign="top" bgcolor="#F7F7F9">
-            <h3>X2Many Ready</h3>
-            <p>
-                Works with embedded one2many and many2many list views inside
-                Odoo form views.
+        </div>
+        <div style="display: table-cell; width: 33.33%; vertical-align: top; background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px;">
+            <h3 style="margin: 0 0 8px; font-size: 20px; color: #111827;">X2Many Ready</h3>
+            <p style="margin: 0; color: #4b5563;">
+                Works with embedded <strong>one2many</strong> and <strong>many2many</strong> list fields inside Odoo form views.
             </p>
-        </td>
-        <td width="33%" valign="top" bgcolor="#F7F7F9">
-            <h3>Native XLSX Export</h3>
-            <p>
-                Uses Odoo's standard XLSX export endpoint, so exported files keep
-                the familiar Odoo Excel format.
+        </div>
+        <div style="display: table-cell; width: 33.33%; vertical-align: top; background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px;">
+            <h3 style="margin: 0 0 8px; font-size: 20px; color: #111827;">Native XLSX Export</h3>
+            <p style="margin: 0; color: #4b5563;">
+                Uses Odoo's standard XLSX export flow, so downloads feel familiar to Odoo users.
             </p>
-        </td>
-    </tr>
-</table>
+        </div>
+    </div>
 
-<h2 align="center">Usage</h2>
-<pre>
-&lt;field name="line_ids"&gt;
+    <div style="margin: 30px 16px; padding: 26px; border-radius: 10px; background: #111827; color: #f9fafb;">
+        <h2 style="text-align: center; margin: 0 0 18px; font-size: 28px;">Usage</h2>
+        <pre style="margin: 0; padding: 20px; overflow: auto; border-radius: 8px; background: #0b1220; color: #d1d5db; font-size: 14px; line-height: 1.6;"><code>&lt;field name="line_ids"&gt;
     &lt;list string="Lines" editable="bottom" export_xlsx="1"&gt;
         &lt;field name="name"/&gt;
         &lt;field name="date"/&gt;
         &lt;field name="amount"/&gt;
     &lt;/list&gt;
-&lt;/field&gt;
-</pre>
+&lt;/field&gt;</code></pre>
+    </div>
 
-<h2 align="center">Feature Summary</h2>
-<table width="100%" cellpadding="10" cellspacing="0" border="0">
-    <tr>
-        <td width="50%" valign="top">
-            <ul>
+    <div style="display: table; width: 100%; border-spacing: 16px; margin-bottom: 24px;">
+        <div style="display: table-cell; width: 50%; vertical-align: top; padding: 22px; border: 1px solid #e5e7eb; border-radius: 8px;">
+            <h2 style="margin: 0 0 14px; font-size: 24px; color: #111827;">Feature Summary</h2>
+            <ul style="margin: 0; padding-left: 20px; color: #374151;">
                 <li>Adds an Export Excel button to x2many list fields.</li>
                 <li>Enabled only when the nested list has export_xlsx="1".</li>
-                <li>Supports one2many and many2many list views.</li>
-            </ul>
-        </td>
-        <td width="50%" valign="top">
-            <ul>
+                <li>Supports one2many and many2many embedded lists.</li>
                 <li>Exports visible scalar columns from the list view.</li>
-                <li>Skips hidden columns and unsupported relational columns.</li>
-                <li>Designed for Odoo 19 backend forms.</li>
             </ul>
-        </td>
-    </tr>
-</table>
+        </div>
+        <div style="display: table-cell; width: 50%; vertical-align: top; padding: 22px; border: 1px solid #e5e7eb; border-radius: 8px;">
+            <h2 style="margin: 0 0 14px; font-size: 24px; color: #111827;">Common Use Cases</h2>
+            <ul style="margin: 0; padding-left: 20px; color: #374151;">
+                <li>Export order lines and invoice lines.</li>
+                <li>Export employee, project, or product variant lines.</li>
+                <li>Export grant batches or custom relational lists.</li>
+                <li>Give users fast XLSX access without custom server actions.</li>
+            </ul>
+        </div>
+    </div>
 
-<h2 align="center">Installation</h2>
-<p align="center">
-    Copy the module to your addons path, update the apps list, then install
-    <strong>X2Many Excel Export</strong>. Add <strong>export_xlsx="1"</strong>
-    to the x2many list views where the export button should appear.
-</p>
+    <div style="text-align: center; margin: 36px 16px; padding: 28px; border-radius: 10px; background: #f8fafc; border: 1px solid #e5e7eb;">
+        <h2 style="margin: 0 0 10px; color: #111827; font-size: 28px;">Installation</h2>
+        <p style="max-width: 820px; margin: 0 auto; color: #4b5563; font-size: 16px;">
+            Copy the module to your addons path, update the apps list, then install
+            <strong>X2Many Excel Export</strong>. Add <strong>export_xlsx="1"</strong>
+            to each one2many or many2many list where the export button should appear.
+        </p>
+    </div>
 
-<h2 align="center">Search Keywords</h2>
-<p align="center">
-    Odoo 19 x2many export, one2many export Excel, many2many export XLSX,
-    embedded list export, relational field export, export order lines,
-    export invoice lines, export x2many list to Excel.
-</p>
+    <div style="text-align: center; padding: 0 16px 40px;">
+        <h2 style="font-size: 24px; margin: 0 0 10px; color: #111827;">Search Keywords</h2>
+        <p style="margin: 0 auto; max-width: 920px; color: #6b7280;">
+            Odoo 19 x2many export, one2many export Excel, many2many export XLSX,
+            embedded list export, relational field export, export order lines,
+            export invoice lines, export x2many list to Excel.
+        </p>
+    </div>
 </div>
