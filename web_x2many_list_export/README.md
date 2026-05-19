@@ -1,6 +1,9 @@
-# Web X2Many List Export
+# X2Many Excel Export
 
-Show an **Export Excel** button on one2many and many2many lists in form views when enabled in XML.
+Show an **Export Excel** button on one2many and many2many embedded list fields in Odoo 19 form views.
+
+This module is useful when users need to export relational lines such as order lines, invoice lines,
+employee lines, grant batches, product variants, project lines, or any x2many list shown inside a form.
 
 ## Usage
 
