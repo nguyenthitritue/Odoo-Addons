@@ -1,0 +1,32 @@
+// Active navigation tab indicator
+// Semi-transparent white overlay — works on any colored navbar without harsh contrast.
+.o_main_navbar .o_menu_sections {
+    .o_active_nav_entry,
+    button.o_active_nav_entry {
+        background: rgba($o-white, 0.18) !important;
+        color: $o-white !important;
+        border-radius: 6px;
+        border-bottom: none;
+        font-weight: 700;
+
+        &:hover,
+        &:focus {
+            background: rgba($o-white, 0.25) !important;
+            color: $o-white !important;
+        }
+    }
+}
+
+// Active sub-item inside dropdown menu (white background context).
+.o_active_dropdown_item {
+    background-color: $o-navbar-background !important;
+    color: $o-white !important;
+    font-weight: 600;
+    border-radius: 4px;
+
+    &:hover,
+    &:focus {
+        background-color: darken($o-navbar-background, 8%) !important;
+        color: $o-white !important;
+    }
+}

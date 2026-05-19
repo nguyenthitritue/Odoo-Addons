@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <!--
+        Patch 1: Direct-link section tab (DropdownItem with class o_nav_entry).
+        Adds o_active_nav_entry class when isCurrentSection(section) is true.
+    -->
+    <t t-inherit="web.NavBar.SectionsMenu" t-inherit-mode="extension">
+        <xpath expr="//DropdownItem[@class=&quot;'o_nav_entry'&quot;]" position="attributes">
+            <attribute name="class">{'o_nav_entry': true, 'o_active_nav_entry': isCurrentSection(section)}</attribute>
+        </xpath>
+    </t>
+
+    <!--
+        Patch 2: Dropdown-parent section tab (button inside Dropdown block).
+        Adds o_active_nav_entry when any descendant action matches the current page.
+    -->
+    <t t-inherit="web.NavBar.SectionsMenu" t-inherit-mode="extension">
+        <xpath expr="//t[@t-else]/Dropdown/button" position="attributes">
+            <attribute name="t-att-class">{'o_active_nav_entry': isCurrentSection(section)}</attribute>
+        </xpath>
+    </t>
+
+    <!--
+        Patch 3: Dropdown sub-items (items inside the dropdown menu).
+        Adds o_active_dropdown_item to the currently active sub-item.
+    -->
+    <t t-inherit="web.NavBar.SectionsMenu.Dropdown.MenuSlot" t-inherit-mode="extension">
+        <xpath expr="//DropdownItem" position="attributes">
+            <attribute name="class">{'dropdown-item': true, 'o_dropdown_menu_group_entry': decalage gt 20, 'o_active_dropdown_item': isCurrentItem(item)}</attribute>
+        </xpath>
+    </t>
+
+</templates>
