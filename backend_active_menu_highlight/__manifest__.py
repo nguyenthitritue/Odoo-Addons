@@ -8,7 +8,8 @@ between list, form, and dropdown actions. It adds a clear active state to the
 current navbar section and dropdown menu item across all backend menus in Odoo 19.
     """,
     "depends": ["web"],
-    "author": "HRIS-VNG",
+    "author": "odoo.solution.vn",
+    "support": "odoo.solution.vn@gmail.com",
     "license": "LGPL-3",
     "category": "Extra Tools",
     "images": ["static/description/main_screenshot.png"],
