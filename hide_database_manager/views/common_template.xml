@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <template id="inherited_login_layout" inherit_id="web.login_layout" name="My Theme Login"
+        <template id="inherited_login_layout" inherit_id="web.login_layout" name="Hide Database Manager Link"
                   priority="3">
             <xpath expr="//t[@t-call='web.frontend_layout']/t[last()]" position="after">
                  <t t-set="disable_database_manager" t-value="1"/>

@@ -1,28 +1,30 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Pos Count Item",
+    'name': "POS Item Count",
     'license': 'AGPL-3',
-    'summary': """Count number item in POS""",
+    'summary': """Show the total item quantity in the Odoo 19 POS order summary.""",
     'description': """
-        Count number item in POS
+        Show the total item quantity in the Odoo 19 Point of Sale order summary.
     """,
-    'version': "16.0",
+    'version': "19.0.1.0.0",
     'author': "odoo.solution.vn",
     'support': 'odoo.solution.vn@gmail.com',
     'images': ['static/description/img.png'],
     'category': 'Sales/Point of Sale',
-    'price': 4.99,
+    'price': 9.99,
     'currency': 'USD',
-    'depends': ['base', 'point_of_sale'],
+    'depends': ['point_of_sale'],
 
     # always loaded
     'data': [
     ],
     'assets': {
-        'point_of_sale.assets': [
+        'point_of_sale._assets_pos': [
             'pos_count_item/static/src/css/item_count.scss',
-            'pos_count_item/static/src/js/*',
             'pos_count_item/static/src/xml/*',
         ]
     },
+    'installable': True,
+    'application': False,
+    'auto_install': False,
 }

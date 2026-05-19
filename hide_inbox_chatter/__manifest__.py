@@ -3,17 +3,16 @@
 {
     'name': "Hide Inbox Chatter",
     'license': 'AGPL-3',
-    'summary': """Hide Chatter and Inbox Hide Discussion Menu and chatter from Odoo""",
+    'summary': """Hide the messaging inbox menu from the Odoo 19 backend navbar.""",
     'description': """
-        Hide Chatter & Inbox
-        Hide Discussion Menu and chatter from Odoo Tray
+        Hide the messaging inbox menu from the Odoo 19 backend navbar.
     """,
-    'version': "16.0",
+    'version': "19.0.1.0.0",
     'author': "odoo.solution.vn",
     'support': 'odoo.solution.vn@gmail.com',
     'images': ['static/description/img.png'],
-    'category': 'tools',
-    'depends': ['base'],
+    'category': 'Extra Tools',
+    'depends': ['mail'],
     'data': [
 
     ],

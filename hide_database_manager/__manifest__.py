@@ -1,19 +1,19 @@
 # -*- coding: utf-8 -*-
 
 {
-    'name': "Hide database manager",
+    'name': "Hide Database Manager",
     'license': 'AGPL-3',
-    'summary': """Hide link to database manager in login screen""",
+    'summary': """Hide the database manager link on the Odoo 19 login screen.""",
     'description': """
-        Hide link to database manager in login screen
+        Hide the database manager link on the Odoo 19 login screen.
     """,
-    'version': "16.0",
+    'version': "19.0.1.0.0",
     'author': "odoo.solution.vn",
     'support': 'odoo.solution.vn@gmail.com',
     'images': ['static/description/img.png'],
-    'category': 'tools',
-    'depends': ['base'],
-    'price': 1.99,
+    'category': 'Extra Tools',
+    'depends': ['web'],
+    'price': 9.99,
     'currency': 'USD',
     'data': [
         'views/common_template.xml',
