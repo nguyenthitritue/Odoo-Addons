@@ -12,6 +12,8 @@ current navbar section and dropdown menu item across all backend menus in Odoo 1
     "support": "odoo.solution.vn@gmail.com",
     "license": "LGPL-3",
     "category": "Extra Tools",
+    "price": 8.6,
+    "currency": "USD",
     "images": ["static/description/main_screenshot.png"],
     "assets": {
         "web.assets_backend": [
