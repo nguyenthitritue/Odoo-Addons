@@ -1,0 +1,80 @@
+<div>
+<div align="center">
+    <h1>X2Many Excel Export for Odoo 19</h1>
+    <h3>Add an Export Excel button to one2many and many2many list fields</h3>
+    <p>
+        X2Many Excel Export lets developers enable Excel export directly inside
+        embedded list views on Odoo forms. Add <strong>export_xlsx="1"</strong>
+        to the nested <strong>&lt;list&gt;</strong> tag and users can download the
+        list records as an XLSX file.
+    </p>
+</div>
+
+<p align="center">
+    <img src="main_screenshot.png" width="100%" alt="Export Excel button on an Odoo x2many list field" />
+</p>
+
+<table width="100%" cellpadding="12" cellspacing="0" border="0">
+    <tr>
+        <td width="33%" valign="top" bgcolor="#F7F7F9">
+            <h3>Simple XML Switch</h3>
+            <p>
+                Enable export per list with <strong>export_xlsx="1"</strong>.
+                No Python code is needed in your business module.
+            </p>
+        </td>
+        <td width="33%" valign="top" bgcolor="#F7F7F9">
+            <h3>X2Many Ready</h3>
+            <p>
+                Works with embedded one2many and many2many list views inside
+                Odoo form views.
+            </p>
+        </td>
+        <td width="33%" valign="top" bgcolor="#F7F7F9">
+            <h3>Native XLSX Export</h3>
+            <p>
+                Uses Odoo's standard XLSX export endpoint, so exported files keep
+                the familiar Odoo Excel format.
+            </p>
+        </td>
+    </tr>
+</table>
+
+<h2 align="center">Usage</h2>
+<pre>
+&lt;field name="line_ids"&gt;
+    &lt;list string="Lines" editable="bottom" export_xlsx="1"&gt;
+        &lt;field name="name"/&gt;
+        &lt;field name="date"/&gt;
+        &lt;field name="amount"/&gt;
+    &lt;/list&gt;
+&lt;/field&gt;
+</pre>
+
+<h2 align="center">Feature Summary</h2>
+<table width="100%" cellpadding="10" cellspacing="0" border="0">
+    <tr>
+        <td width="50%" valign="top">
+            <ul>
+                <li>Adds an Export Excel button to x2many list fields.</li>
+                <li>Enabled only when the nested list has export_xlsx="1".</li>
+                <li>Supports one2many and many2many list views.</li>
+            </ul>
+        </td>
+        <td width="50%" valign="top">
+            <ul>
+                <li>Exports visible scalar columns from the list view.</li>
+                <li>Skips hidden columns and unsupported relational columns.</li>
+                <li>Designed for Odoo 19 backend forms.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<h2 align="center">Installation</h2>
+<p align="center">
+    Copy the module to your addons path, update the apps list, then install
+    <strong>X2Many Excel Export</strong>. Add <strong>export_xlsx="1"</strong>
+    to the x2many list views where the export button should appear.
+</p>
+</div>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="web_x2many_list_export.X2ManyFieldExport" t-inherit="web.X2ManyField" t-inherit-mode="extension">
+        <xpath expr="//div[contains(@class, 'o_x2m_control_panel')]" position="inside">
+            <div t-if="showX2ManyExportXlsxButton" class="d-flex justify-content-end w-100 mb-2">
+                <button t-if="showX2ManyExportXlsxButton" type="button" class="btn btn-secondary btn-sm" t-on-click="onClickX2ManyExportXlsx">
+                    <i class="fa fa-download me-1"/>
+                    <t t-esc="x2ManyExportButtonLabel"/>
+                </button>
+            </div>
+        </xpath>
+    </t>
+</templates>
