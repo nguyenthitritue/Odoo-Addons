@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'X2Many Excel Export',
+    'name': 'One2Many Export (many2many export excel)',
     'summary': 'Export one2many and many2many embedded list fields to Excel XLSX in Odoo 19.',
     'description': """
         X2Many Excel Export adds an Export Excel button to embedded one2many
